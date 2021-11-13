@@ -1,0 +1,502 @@
+
+@import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+
+	margin: 0;
+	background-image:url(Archivos/ima.png) ;
+	background-size:100% 100%;
+    background-attachment: fixed;
+
+	
+
+	font-family: sans-serif;
+
+
+}
+
+
+header{
+	width: 100%;
+	background: rgb(0, 100, 0,50);
+}
+#btn-menu{
+	display: none;
+
+}
+
+header label {
+	display:none ;
+	width: 45px;
+	height: 45px;
+	padding: 10px;
+	border-right: 1px solid #fff;
+}
+
+header label:hover{
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul{
+	margin:0 ;
+	list-style: none;
+	padding: 0;
+	display: flex;
+   justify-content: center;
+}
+
+.menu li{
+	border-right: 1px solid #fff;
+}
+
+.menu li a{
+	display: block;
+	padding: 15px 20px ;
+	color: #fff;
+	text-decoration: none;
+text-align: center;
+
+}
+
+.active,.menu li:hover{
+	background:#2bab0d;  
+}
+
+@media(max-width: 768px){
+header label{
+   display: block;
+ }
+ .menu{
+ 	position: absolute;
+	background: rgb(0, 100, 0,50);
+	width: 40%;
+	margin-left:-40%;
+	transition: all 0.5s;
+
+ }
+   .menu ul{
+   	flex-direction: column;
+   }
+   .menu li{
+   	border-top: 1px solid #fff;
+   }
+
+   #btn-menu:checked ~ .menu{
+   	margin: 0;
+
+   }
+   .manual-btn{
+   	display: none;
+   }
+}
+
+
+
+
+.footer{
+	position: relative;
+	margin: 0;
+	padding: 70px 0;
+	box-sizing: border-box;
+	background: #24262b;
+
+width: 100%;
+
+	line-height: 1.5;
+	font-family: 'Poppins',sans-serif;
+
+
+}
+
+.container{
+	max-width: 1170px;
+	
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.up{
+    
+	width: 22%;
+	padding: 0 10px;
+      
+}
+.up h4{
+	font-size: 18;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 30px;
+	font-weight: 500;
+	position: relative;
+
+}
+.up h4::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+
+}
+
+.up ul li:not(:last-child){
+
+	margin-bottom: 10px;
+}
+.up ul li a{
+
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease ;
+}
+.up ul li a:hover{
+color:#ffffff ;
+padding-left: 10px;
+}
+.up .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+
+
+}
+.up .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+
+}
+
+@media(max-width: 767px){
+
+}
+
+img{
+	max-width:100% ;
+	max-height:100%
+}
+h4{
+	font-size: 20px;
+}
+
+
+.slider{
+	 border-radius: 10px;
+	 padding: 0;
+	 overflow: hidden;
+}
+
+.slides{
+
+	width: 500%;
+	height: 500px;
+	display: flex;
+}
+.slides input{
+	display: none;
+}
+
+
+.slide{
+	width: 20%;
+  transition: 2s;
+
+}
+.slide img{
+	width: 1270px;
+	height: 300px;
+
+	    object-fit: cover;
+  
+    margin: auto;
+    min-height: 25px;
+
+    max-height: none;
+    min-width: 100%;
+    max-width: none;
+    top: -100%;
+    bottom: -100%;
+    left: -200%;
+    right: -200%;
+	
+}
+.navigation-manual{
+position: absolute;
+width: 100%;
+margin-top: -200px;
+display: flex;
+justify-content: center;
+
+
+}
+.manual-btn{
+
+	border: 3px solid #ffffff ;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 3s;
+}
+.manual-btn:not(:last-child){
+	margin-right: 40px;
+}
+.manual-btn:hover{
+	background: white;
+}
+
+#radio1:checked ~ .first{
+	margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+	margin-left: -20%;
+}
+#radio3:checked ~ .first{
+	margin-left: -40%;
+}
+#radio4:checked ~ .first{
+	margin-left: -60%;
+}
+
+.navigation-auto{
+
+	position: absolute;
+	display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 200px ;
+
+
+
+}
+.navigation-auto div{
+	display: none;
+border: 2px solid #ffffff;
+padding: 5px;
+border-radius: 10px;
+transition:1s;
+}
+
+.navigation-auto div:not(last-child){
+	margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+	background: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+	background: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+	background: white;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+	background: white;
+}
+
+ #first,.slide img{
+
+height: 350px;
+z-index:1;
+width:100%;
+border-radius: 5px;
+
+}
+
+
+
+
+.info{
+
+position: absolute;
+top: 191px;
+width: 650px;
+margin-left: 0px;
+padding: 20px 30px;
+height: 260px;
+
+
+}
+.info h1{
+	position: absolute;
+top: 10px;
+	color: #504d4d;
+	
+}
+.info a{
+
+		position: relative;
+top: 70px;
+width: 400px;
+text-decoration: none;
+color: #e6dfdf;
+	font-size: 50px;
+	margin-left: auto;
+
+}
+
+
+
+
+
+
+
+.for-text{
+	z-index: 0;
+	margin-top:-150px ;
+	padding: 0 5px;
+	color: white;
+	position: relative;
+	background: white;
+
+	height: 600px;
+	z-index: 1;
+
+
+}
+
+.for-text h1{
+	position: relative;
+	top: 50px;
+	display: block;
+
+	color: black;
+	
+	justify-content: center;
+
+		font-family:sans-serif;
+	font-size: xx-large;
+}
+header{
+	position: absolute;
+	z-index: 30;
+}
+
+.ImageContainer{
+	position: relative;
+	top:100px ;
+	width: 98%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	display: grid;
+	grid-template-columns:repeat(1, 1fr) ;
+	grid-gap: 30px;
+	justify-content: center;
+
+}
+.item{
+justify-content: center;
+	
+	padding: 5px;
+	height: 400px;
+
+}
+.item h3{
+
+	color: rgba(0, 0, 0, 0.73);
+	height: 30px;
+	font-size: 20px;
+
+
+}
+.item p{
+	
+	font-size: 20px;
+}
+.item-text{
+	color: black;
+	padding: 1px;
+
+}
+
+.item-img{
+	position: relative;
+  margin-top:20px ;
+  margin-bottom: 9px;
+	max-width: 100%;
+	display: block;
+}
+
+@media(min-width: 792px){
+
+   .ImageContainer{
+	grid-template-columns: repeat(3, 1fr);
+   }
+
+}
+.description-of-certificate{
+background: white;
+		
+}
+.img-ministery img{
+width: 100%;
+	display: block;
+	margin: 0;
+	text-align: left;
+
+
+}
+.img-ministery {
+	display: grid;
+		grid-template-columns:repeat(2, 1fr) ;
+}
+
+.escudo h3{
+
+	font-size: 30px;
+
+}
+.escudo p{
+
+	position: relative;
+	top: 10px;
+	padding: 1px;
+
+}
+.Recurso{
+		display: grid;
+	background: white;
+	grid-template-columns:repeat(2, 1fr) ;
+}
+.Recurso h3{
+
+}
+.Recurso img{
+	display: inline-block;
+	margin-left: 90px;
+}
+
+
+
